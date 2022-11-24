@@ -1,0 +1,11 @@
+<resources>
+    <string name="logo">Logo</string>
+    <string name="menu">menu</string>
+    <string name="filter">filter</string>
+
+    <string name="app_name">ConnectionAnimal</string>
+    <string name="underApp">Законекти своих питомцев</string>
+
+    <string name="product">Product of</string>
+    <string name="me">Gromov A.</string>
+</resources>
