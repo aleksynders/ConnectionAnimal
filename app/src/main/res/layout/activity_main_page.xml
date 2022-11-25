@@ -53,10 +53,26 @@
         app:srcCompat="@drawable/buttonfilter" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgFilter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgFilter"
-        app:layout_constraintTop_toTopOf="@+id/imgFilter" />
+        app:layout_constraintTop_toTopOf="@+id/imgFilter"
+        tools:listitem="@layout/category_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/animalRecycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler" />
 </androidx.constraintlayout.widget.ConstraintLayout>
