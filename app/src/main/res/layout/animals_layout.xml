@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="230dp"
+        android:layout_height="340dp"
+        app:cardBackgroundColor="@color/background_view"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+
+            <ImageView
+                android:id="@+id/animalIMG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="animal"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/cat1"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/nameAnimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/pufik"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/descriptionAnimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/montserrat"
+                android:maxLines="2"
+                android:text="@string/desc"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:text="Откликнуться"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15sp"
+                android:backgroundTint="@color/mainColor"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

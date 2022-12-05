@@ -10,4 +10,5 @@
 
 
     <color name="mainColor">#F24E1E</color>
+    <color name="background_view">#E7E7E7</color>
 </resources>
