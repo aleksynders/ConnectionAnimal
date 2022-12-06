@@ -3,6 +3,9 @@ package com.example.tinderanimal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,9 +21,13 @@ import java.util.List;
 
 public class MainPage extends AppCompatActivity {
 
+    ImageButton clsCategory;
+
     RecyclerView categoryRecycler, animalRecycler;
     CategoryAdapter categoryAdapter;
-    AnimalAdapter animalAdapter;
+    static AnimalAdapter animalAdapter;
+    static List<Animal> animalList = new ArrayList<>();
+    static List<Animal> fullAnimalList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +43,24 @@ public class MainPage extends AppCompatActivity {
 
         setCategoryRecycler(categoryList);
 
-        List<Animal> animalList = new ArrayList<>();
-        animalList.add(new Animal(1,"cat1", "Пуфик", "Ярый любитель сосисок. Ищет кошечку"));
-        animalList.add(new Animal(2,"cat2", "Розочка", "Ищет ласкового котика для создания потомства"));
-        animalList.add(new Animal(3,"cat3", "Муся", "Строгая, хорошая, милая, ласковая. Ищет сильного и верного котика"));
+
+        animalList.add(new Animal(1,"cat1", "Пуфик", "Ярый любитель сосисок. Ищет кошечку", 2));
+        animalList.add(new Animal(2,"cat2", "Розочка", "Ищет ласкового котика для создания потомства", 2));
+        animalList.add(new Animal(3,"cat3", "Муся", "Строгая, хорошая, милая, ласковая. Ищет сильного и верного котика", 2));
+
+        fullAnimalList.addAll(animalList);
+
         setAnimalRecycler(animalList);
+
+        clsCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                animalList.clear();
+                animalList.addAll(fullAnimalList);
+
+                animalAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     private void setAnimalRecycler(List<Animal> animalList) {
@@ -59,5 +79,23 @@ public class MainPage extends AppCompatActivity {
 
         categoryAdapter = new CategoryAdapter(this, categoryList);
         categoryRecycler.setAdapter(categoryAdapter);
+
+        clsCategory = findViewById(R.id.imgFilter);
     }
+
+    public static void showAnimalCategory(int category){
+            animalList.clear();
+            animalList.addAll(fullAnimalList);
+
+            List<Animal> filterAnimal = new ArrayList<>();
+
+            for(Animal a : animalList){
+                if(a.getCategory()==category)
+                    filterAnimal.add(a);
+            }
+            animalList.clear();
+            animalList.addAll(filterAnimal);
+            animalAdapter.notifyDataSetChanged();
+    }
+
 }

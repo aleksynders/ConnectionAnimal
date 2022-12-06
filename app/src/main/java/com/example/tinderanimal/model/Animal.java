@@ -2,14 +2,23 @@ package com.example.tinderanimal.model;
 
 public class Animal {
 
-    int id;
+    int id, category;
     String img, title, description;
 
-    public Animal(int id, String img, String title, String description) {
+    public Animal(int id, String img, String title, String description, int category) {
         this.id = id;
         this.img = img;
         this.title = title;
         this.description = description;
+        this.category = category;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public int getId() {

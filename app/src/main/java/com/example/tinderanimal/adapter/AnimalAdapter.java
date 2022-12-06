@@ -1,5 +1,6 @@
 package com.example.tinderanimal.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -36,7 +37,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AnimalViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AnimalViewHolder holder, @SuppressLint("RecyclerView") int position) {
         int imgID = context.getResources().getIdentifier(animals.get(position).getImg(),"drawable", context.getPackageName());
         holder.animalImg.setImageResource(imgID);
         holder.animalTitle.setText(animals.get(position).getTitle());

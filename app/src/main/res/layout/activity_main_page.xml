@@ -41,22 +41,25 @@
             app:srcCompat="@drawable/minivector" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
+
+    <ImageButton
         android:id="@+id/imgFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
+        android:background="@color/white"
         android:contentDescription="@string/filter"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:srcCompat="@drawable/buttonfilter" />
+        app:srcCompat="@drawable/buttonfilter"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecycler"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
+        android:layout_width="303dp"
+        android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgFilter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgFilter"
