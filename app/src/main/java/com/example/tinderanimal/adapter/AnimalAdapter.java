@@ -1,17 +1,19 @@
 package com.example.tinderanimal.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tinderanimal.R;
+import com.example.tinderanimal.animalPage;
 import com.example.tinderanimal.model.Animal;
 
 import java.util.List;
@@ -39,6 +41,20 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
         holder.animalImg.setImageResource(imgID);
         holder.animalTitle.setText(animals.get(position).getTitle());
         holder.descriptionAnimal.setText(animals.get(position).getDescription());
+
+
+        holder.buttonClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, animalPage.class);
+
+                intent.putExtra("imgA", imgID);
+                intent.putExtra("titleA", animals.get(position).getTitle());
+                intent.putExtra("descA", animals.get(position).getDescription());
+
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -50,10 +66,12 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
         ImageView animalImg;
         TextView animalTitle, descriptionAnimal;
+        Button buttonClick;
 
         public AnimalViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            buttonClick = itemView.findViewById(R.id.buttonCloseAnimal);
             animalImg = itemView.findViewById(R.id.animalIMG);
             animalTitle = itemView.findViewById(R.id.nameAnimal);
             descriptionAnimal = itemView.findViewById(R.id.descriptionAnimal);

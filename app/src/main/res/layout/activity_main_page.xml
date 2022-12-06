@@ -75,5 +75,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler" />
+        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler"
+        tools:listitem="@layout/animals_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
