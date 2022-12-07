@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -67,7 +68,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
         ImageView animalImg;
         TextView animalTitle, descriptionAnimal;
-        Button buttonClick;
+        ImageButton buttonClick;
 
         public AnimalViewHolder(@NonNull View itemView) {
             super(itemView);

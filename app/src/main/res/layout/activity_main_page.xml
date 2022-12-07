@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:background="@color/white"
         android:contentDescription="@string/filter"
         android:minHeight="48dp"
@@ -78,6 +78,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler"
-        tools:listitem="@layout/animals_layout"/>
+        app:layout_constraintTop_toBottomOf="@+id/categoryRecycler" />
 </androidx.constraintlayout.widget.ConstraintLayout>

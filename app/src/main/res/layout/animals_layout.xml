@@ -57,16 +57,16 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
-            <Button
+
+            <ImageButton
                 android:id="@+id/buttonCloseAnimal"
-                android:layout_width="130dp"
-                android:layout_height="35dp"
-                android:text="Откликнуться"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15sp"
-                android:backgroundTint="@color/mainColor"
+                android:background="@color/background_view"
                 android:fontFamily="@font/montserrat_semibold"
-                android:textSize="10dp"/>
+                app:srcCompat="@drawable/buttonotkl" />
 
 
         </LinearLayout>
