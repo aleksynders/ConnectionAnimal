@@ -1,11 +1,13 @@
 package com.example.tinderanimal;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,12 +25,15 @@ public class MainPage extends AppCompatActivity {
 
     ImageButton clsCategory;
 
+    TextView mainPageHeader, help;
+
     RecyclerView categoryRecycler, animalRecycler;
     CategoryAdapter categoryAdapter;
     static AnimalAdapter animalAdapter;
     static List<Animal> animalList = new ArrayList<>();
     static List<Animal> fullAnimalList = new ArrayList<>();
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +66,18 @@ public class MainPage extends AppCompatActivity {
                 animalAdapter.notifyDataSetChanged();
             }
         });
+
+        mainPageHeader = findViewById(R.id.mainPageHeader);
+        help = findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainPage.this, activity_help.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     private void setAnimalRecycler(List<Animal> animalList) {

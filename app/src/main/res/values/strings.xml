@@ -3,6 +3,12 @@
     <string name="menu">menu</string>
     <string name="filter">filter</string>
 
+    <string name="main">Главная</string>
+    <string name="help">Поддержка</string>
+
+    <string name="hi">Приветствуем!</string>
+    <string name="text_help">Если у Вас возникла проблема с работой в нашем приложении, то Вы в любое время можете позвонить нам по горячему номеру или же отправить вашу проблему на нашу почту</string>
+
     <string name="app_name">ConnectionAnimal</string>
     <string name="underApp">Законекти своих питомцев</string>
 
