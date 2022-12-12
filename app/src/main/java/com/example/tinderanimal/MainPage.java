@@ -39,6 +39,8 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
+        animalList.clear();
+
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1,"Собаки"));
         categoryList.add(new Category(2,"Кошки"));
@@ -49,9 +51,11 @@ public class MainPage extends AppCompatActivity {
         setCategoryRecycler(categoryList);
 
 
-        animalList.add(new Animal(1,"cat1", "Пуфик", "Ярый любитель сосисок. Ищет кошечку", 2));
-        animalList.add(new Animal(2,"cat2", "Розочка", "Ищет ласкового котика для создания потомства", 2));
-        animalList.add(new Animal(3,"cat3", "Муся", "Строгая, хорошая, милая, ласковая. Ищет сильного и верного котика", 2));
+        animalList.add(new Animal(1,"cat1", "Пуфик", "Ярый любитель сосисок. Ищет кошечку", "+7 (920) 892-45-23", "pufik_krut@mail.ru", 2));
+        animalList.add(new Animal(2,"cat2", "Розочка", "Ищет ласкового котика для создания потомства", "+7 (934) 855-33-22", "rozakoshka@mail.ru", 2));
+        animalList.add(new Animal(3,"cat3", "Муся", "Строгая, хорошая, милая, ласковая. Ищет сильного и верного котика", "+7 (440) 845-41-11", "sdvsdvsdfadsf@mail.ru", 2));
+
+        animalList.add(new Animal(4,"cat1", "Кукуруза", "Яростный и злой", "+7 (920) 892-45-23", "rvevsvsv@mail.ru", 4));
 
         fullAnimalList.addAll(animalList);
 

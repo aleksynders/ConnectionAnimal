@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 
 public class animalPage extends AppCompatActivity {
 
@@ -23,18 +25,23 @@ public class animalPage extends AppCompatActivity {
         TextView titleA = findViewById(R.id.nameAnimalPage);
         TextView descA = findViewById(R.id.descAnimalPage);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button butCLS = findViewById(R.id.buttonCloseAnimal);
+        TextView number = findViewById(R.id.number);
+        TextView mail = findViewById(R.id.mail);
+
+        Button butCLS = findViewById(R.id.buttonCloseAnimal);
 
         imgA.setImageResource(getIntent().getIntExtra("imgA", 0));
         titleA.setText(getIntent().getStringExtra("titleA"));
         descA.setText(getIntent().getStringExtra("descA"));
+        number.setText(getIntent().getStringExtra("numA"));
+        mail.setText(getIntent().getStringExtra("mailA"));
+
 
         butCLS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(animalPage.this, MainPage.class);
-                startActivity(intent);
-                finish();
+                onBackPressed();
+
             }
         });
     }

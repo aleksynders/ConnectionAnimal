@@ -53,6 +53,8 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
                 intent.putExtra("imgA", imgID);
                 intent.putExtra("titleA", animals.get(position).getTitle());
                 intent.putExtra("descA", animals.get(position).getDescription());
+                intent.putExtra("numA", animals.get(position).getNumber());
+                intent.putExtra("mailA", animals.get(position).getMail());
 
                 context.startActivity(intent);
             }
