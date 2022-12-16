@@ -40,6 +40,7 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
 
         animalList.clear();
+        fullAnimalList.clear();
 
         List<Category> categoryList = new ArrayList<>();
         categoryList.add(new Category(1,"Собаки"));
