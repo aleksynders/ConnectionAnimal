@@ -56,7 +56,7 @@ public class MainPage extends AppCompatActivity {
         animalList.add(new Animal(2,"cat2", "Розочка", "Ищет ласкового котика для создания потомства", "+7 (934) 855-33-22", "rozakoshka@mail.ru", 2));
         animalList.add(new Animal(3,"cat3", "Муся", "Строгая, хорошая, милая, ласковая. Ищет сильного и верного котика", "+7 (440) 845-41-11", "sdvsdvsdfadsf@mail.ru", 2));
 
-        animalList.add(new Animal(4,"cat1", "Кукуруза", "Яростный и злой", "+7 (920) 892-45-23", "rvevsvsv@mail.ru", 4));
+        animalList.add(new Animal(4,"pig", "Кукуруза", "Яростный и злой", "+7 (920) 892-45-23", "rvevsvsv@mail.ru", 4));
 
         fullAnimalList.addAll(animalList);
 
